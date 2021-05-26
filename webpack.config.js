@@ -79,6 +79,26 @@ module.exports = {
                 //     return '[hash].[ext]'
                 // }
             }
+        }, {
+            test: /\.(jpe?g|png|gif|svg)$/i,
+            use: [{
+                loader: ImageMinimizerPlugin.loader,
+                options: {
+                    severityError: 'warning', // Ignore errors on corrupted images
+                    minimizerOptions: {
+                        plugins: ['gifsicle'],
+                    },
+                },
+            }],
+        }, {
+            test: /\.(glsl|frag|vert)/,
+            loader: 'raw-loader',
+            exclude: /node_modules/
+        }, {
+            test: /\.(glsl|frag|vert)/,
+            loader: 'glslify-loader',
+            exclude: /node_modules/
+
         }]
     }
 }
