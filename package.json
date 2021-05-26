@@ -7,7 +7,8 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "npm run development",
         "development": "webpack serve --progress --config webpack.config.development.js",
-        "build": "webpack --progress --config webpack.config.build.js"
+        "build": "webpack --progress --config webpack.config.build.js",
+        "lint": "./node_modules/.bin/eslint"
     },
     "repository": {
         "type": "git",
@@ -29,6 +30,17 @@
         "clean-webpack-plugin": "^4.0.0-alpha.0",
         "copy-webpack-plugin": "^8.1.1",
         "css-loader": "^5.2.6",
+        "eslint": "^7.27.0",
+        "eslint-config-airbnb": "^18.2.1",
+        "eslint-config-standard": "^16.0.3",
+        "eslint-loader": "^4.0.2",
+        "eslint-plugin-import": "^2.23.3",
+        "eslint-plugin-jsx-a11y": "^6.4.1",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-promise": "^5.1.0",
+        "eslint-plugin-react": "^7.23.2",
+        "eslint-plugin-react-hooks": "^1.7.0",
+        "eslint-plugin-standard": "^5.0.0",
         "file-loader": "^6.2.0",
         "glslify-loader": "^2.0.0",
         "image-minimizer-webpack-plugin": "^2.2.0",
