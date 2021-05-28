@@ -109,3 +109,6 @@ public/
 
 #editor config files
 .vscode
+
+#env
+.env
